@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "958717471016",
+    "project_id": "anonymouschat-d0eff",
+    "storage_bucket": "anonymouschat-d0eff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958717471016:android:74a6b0b072b6b804bf481d",
+        "android_client_info": {
+          "package_name": "com.kmobile.anonymouschat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChXtFt8Teuzk7F-0yU9h_Fi4Dt2KwVQ48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

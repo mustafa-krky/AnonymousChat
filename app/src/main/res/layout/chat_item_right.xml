@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_chat_item_profilresim"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#066159"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_chat_item_mesaj"
+            android:background="@drawable/chat_item_right_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ChatTextColor"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:padding="8dp"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:id="@+id/chat_item_imgResim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/chat_item_right_bg"
+            android:layout_alignParentEnd="true"/>
+
+        <ProgressBar
+            android:id="@+id/chat_item_progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:layout_alignEnd="@+id/chat_item_imgResim"
+            android:layout_alignStart="@id/chat_item_imgResim"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

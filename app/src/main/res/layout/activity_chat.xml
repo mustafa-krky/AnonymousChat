@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_chat_hedef_profil"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/tv_chat_hedef_isim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="testt"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/civ_chat_hedef_profil"
+                android:layout_alignTop="@+id/civ_chat_hedef_profil"/>
+            
+            <ImageView
+                android:id="@+id/iv_chat_kapat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_chat"
+        android:layout_above="@id/chat_relative_bottom"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:id="@+id/chat_relative_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/chat_activity_resim_gonder"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_galeri"
+            android:background="@drawable/chat_img_bg"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/et_chat_mesaj"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:textColor="@color/black"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="4dp"
+            android:layout_toStartOf="@+id/iv_chat_mesaj_gonder"
+            android:layout_toEndOf="@+id/chat_activity_resim_gonder"
+            android:hint="Mesaj yazınız..."/>
+
+        <ImageButton
+            android:id="@+id/iv_chat_mesaj_gonder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_send"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
